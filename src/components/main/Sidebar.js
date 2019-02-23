@@ -2,9 +2,9 @@ import React,
 {
   Component
 } from 'react';
-import './Main.css';
+import './Sidebar.css';
 
-class Main extends Component {
+class Sidebar extends Component {
 
 //JAVASCRIPT
 
@@ -16,7 +16,7 @@ class Main extends Component {
 render() {
   return (
     <div>
-    Main Page
+    Sidebar
     </div>
   );
 }
@@ -24,4 +24,4 @@ render() {
 
 //END OF HTML RENDER
 
-export default Main;
+export default Sidebar;
