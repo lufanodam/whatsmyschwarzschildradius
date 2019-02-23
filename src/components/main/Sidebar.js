@@ -5,7 +5,7 @@ import React,
 
 import '../../styles/global.css'
 
-class Main extends Component {
+class Sidebar extends Component {
 
   //JAVASCRIPT
 
@@ -14,10 +14,10 @@ class Main extends Component {
 
   //HTML RENDER
 
-  render() {
-    return (
-      <div>
-        Main Page
+render() {
+  return (
+    <div>
+    Sidebar
     </div>
     );
   }
@@ -25,4 +25,4 @@ class Main extends Component {
 
 //END OF HTML RENDER
 
-export default Main;
+export default Sidebar;
