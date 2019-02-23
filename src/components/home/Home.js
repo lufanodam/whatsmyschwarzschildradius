@@ -2,9 +2,9 @@ import React,
 {
   Component
 } from 'react';
-import './styles/App.css';
+import '../../styles/global.css';
 
-class App extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
     this.goToMainPage = this.goToMainPage.bind(this)
@@ -32,6 +32,11 @@ class App extends Component {
   setKgText(e) {
     this.setState({kg: e.target.value})
   }
+
+//END OF JAVASCRIPT
+
+//HTML RENDER
+
   render() {
     return (
       <form className="landing-form" autoComplete="off" onSubmit={this.goToMainPage}>
@@ -56,4 +61,6 @@ class App extends Component {
   }
 }
 
-export default App;
+//END OF HTML RENDER
+
+export default Home;
