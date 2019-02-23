@@ -16,26 +16,29 @@ class App extends Component {
       kg: ""
     }
   }
+  lbstokg(lbs) {
+    return lbs*0.453592
+  }
 
   goToMainPage(e) {
     e.preventDefault()
   }
 
   setLbText(e) {
-    this.setState({lb: e.target.value})
+    let lbs = e.target.value
+    this.setState({lb: lbs, kg: this.lbstokg(lbs)})
   }
 
   setKgText(e) {
     this.setState({kg: e.target.value})
   }
-
   render() {
     return (
       <form className="landing-form" onSubmit={this.goToMainPage}>
         <label htmlFor="weight">Weight:</label>
-        {/* kg weight */}
+        {/* lbs weight */}
         <div>
-          <input type="number" 
+          <input type="number"
             value={this.state.lb}
             onChange={this.setLbText}
             name="weight" id='lb-weight' />
@@ -43,7 +46,7 @@ class App extends Component {
         <div>
         {/* kg weight */}
         </div>
-          <input type="number" 
+          <input type="number"
             value={this.state.kg}
             onChange={this.setKgText}
             name="weight" id='kg-weight' />
