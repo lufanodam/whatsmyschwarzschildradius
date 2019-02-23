@@ -4,6 +4,7 @@ import React,
 } from 'react';
 import '../styles/global.css';
 import Sidebar from './Sidebar'
+import Body from './Body'
 
 class Home extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Home extends Component {
     this.goToMainPage = this.goToMainPage.bind(this)
     this.setLbText = this.setLbText.bind(this)
     this.setKgText = this.setKgText.bind(this)
+    this.showMain = false;
 
     this.state = {
       lb: "",
@@ -25,6 +27,7 @@ class Home extends Component {
 }
   goToMainPage(e) {
     e.preventDefault()
+    this.showMain = true;
   }
 
   setLbText(e) {
@@ -62,8 +65,20 @@ class Home extends Component {
         </div>
         <input type="submit" value="Calculate" />
       </form>
+
+
+
+
+
+      <Body/>
       <Sidebar/>
       </>
+
+
+
+
+
+
     );
   }
 }
