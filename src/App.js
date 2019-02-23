@@ -2,7 +2,7 @@ import React,
 {
   Component
 } from 'react';
-import './App.css';
+import './styles/App.css';
 
 class App extends Component {
   constructor(props) {
@@ -34,8 +34,8 @@ class App extends Component {
   }
   render() {
     return (
-      <form className="landing-form" onSubmit={this.goToMainPage}>
-        <label htmlFor="weight">Weight:</label>
+      <form className="landing-form" autoComplete="off" onSubmit={this.goToMainPage}>
+        <label>Weight:</label>
         {/* lbs weight */}
         <div>
           <input type="number"
@@ -45,11 +45,11 @@ class App extends Component {
         </div>
         <div>
         {/* kg weight */}
-        </div>
           <input type="number"
             value={this.state.kg}
             onChange={this.setKgText}
             name="weight" id='kg-weight' />
+        </div>
         <input type="submit" value="Calculate" />
       </form>
     );
