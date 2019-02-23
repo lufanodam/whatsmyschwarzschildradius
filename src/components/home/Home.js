@@ -19,7 +19,9 @@ class Home extends Component {
   lbstokg(lbs) {
     return lbs*0.453592
   }
-
+  kgstolbs(kgs) {
+    return kgs/0.453592
+}
   goToMainPage(e) {
     e.preventDefault()
   }
@@ -30,7 +32,8 @@ class Home extends Component {
   }
 
   setKgText(e) {
-    this.setState({kg: e.target.value})
+    let kgs = e.target.value
+    this.setState({kg: kgs, lb: this.kgstolbs(kgs)})
   }
 
 //END OF JAVASCRIPT
