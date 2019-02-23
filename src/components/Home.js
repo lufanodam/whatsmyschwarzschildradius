@@ -9,25 +9,28 @@ import Body from './Body'
 class Home extends Component {
   constructor(props) {
     super(props)
-    this.goToMainPage = this.goToMainPage.bind(this)
+    this.goToMainPage = this.showBody.bind(this)
     this.setLbText = this.setLbText.bind(this)
     this.setKgText = this.setKgText.bind(this)
-    this.showMain = false;
+    this.showBody = this.showBody.bind(this)
 
     this.state = {
       lb: "",
-      kg: ""
+      kg: "",
+      showBody: false
     }
   }
+
   lbstokg(lbs) {
     return lbs*0.453592
   }
+  
   kgstolbs(kgs) {
     return kgs/0.453592
 }
-  goToMainPage(e) {
+  showBody(e) {
     e.preventDefault()
-    this.showMain = true;
+    this.setState({showBody: true})
   }
 
   setLbText(e) {
@@ -47,7 +50,7 @@ class Home extends Component {
   render() {
     return (
       <>
-      <form className="landing-form" autoComplete="off" onSubmit={this.goToMainPage}>
+      <form className="landing-form" autoComplete="off" onSubmit={this.showBody}>
         <label>Weight:</label>
         {/* lbs weight */}
         <div>
@@ -70,7 +73,7 @@ class Home extends Component {
 
 
 
-      <Body/>
+      {this.state.showBody && <Body/>}
       <Sidebar/>
       </>
 
