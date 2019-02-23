@@ -2,7 +2,8 @@ import React,
 {
   Component
 } from 'react';
-import '../../styles/global.css';
+import '../styles/global.css';
+import Sidebar from './Sidebar'
 
 class Home extends Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class Home extends Component {
 
   render() {
     return (
+      <>
       <form className="landing-form" autoComplete="off" onSubmit={this.goToMainPage}>
         <label>Weight:</label>
         {/* lbs weight */}
@@ -57,6 +59,8 @@ class Home extends Component {
         </div>
         <input type="submit" value="Calculate" />
       </form>
+      <Sidebar/>
+      </>
     );
   }
 }
