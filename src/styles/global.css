@@ -34,7 +34,9 @@ body {
   height: 40px;
   margin: 15px 0px;
   background-color: var(--main-background-transparent);
-  color: var(--main-font-color)
+  color: var(--main-font-color);
+  border: 1px solid var(--alt-font-color);
+  border-radius: 4px;
 }
 .landing-form label {
   margin-left: 10px;
