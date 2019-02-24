@@ -15,7 +15,7 @@ class Home extends Component {
 
     this.state = {
       landingState: true,
-      radius: 0
+      radius: null
     }
   }
 
@@ -27,7 +27,7 @@ class Home extends Component {
     return (
 
       <>
-        <Body />
+        <Body radius={this.state.radius}/>
         {this.state.landingState && <Header onCalc={this.onCalc} />}
         <Sidebar />
       </>
