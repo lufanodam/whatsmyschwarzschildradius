@@ -11,7 +11,7 @@ getRadius() {
   if (this.props.radius === null) {
     return null
   } else {
-    return this.props.radius
+    return String(this.props.radius * 100) + ' cm'
   }
 }
 
