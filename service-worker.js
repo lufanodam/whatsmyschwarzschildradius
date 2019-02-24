@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/lufanodam/precache-manifest.b3803b220ecd64e646949c17ddb52cc0.js"
+  "/whatsmyschwarzschildradius/precache-manifest.2566b1c7b68ff81b9ca08604f11aedec.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/lufanodam/index.html", {
+workbox.routing.registerNavigationRoute("/whatsmyschwarzschildradius/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
