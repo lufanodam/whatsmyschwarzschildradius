@@ -9,20 +9,32 @@ body {
   margin: 100px auto;
   width: 50%;
   text-align: center;
+  font-size: 30px
+}
+
+.landing-form h3 {
   font-size: 80px;
 }
 
 .landing-form input[type=number] {
   font-size: 30px;
   height: 40px;
-  width: 100%;
+  margin: 15px 0px;
 }
-
+.landing-form label {
+  margin-left: 10px;
+}
 .landing-form input[type=submit] {
-  font-size: 30px;
   background-color: white;
   color: black;
   border: 1px solid black;
   border-radius: 4px;
   padding: 8px;
+}
+
+.sidebar {
+  position: fixed;
+  width: 400px;
+  right: 0; 
+  top: 0;
 }

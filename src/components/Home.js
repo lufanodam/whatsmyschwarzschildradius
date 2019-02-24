@@ -24,7 +24,7 @@ class Home extends Component {
   lbstokg(lbs) {
     return lbs*0.453592
   }
-  
+
   kgstolbs(kgs) {
     return kgs/0.453592
 }
@@ -51,20 +51,22 @@ class Home extends Component {
     return (
       <>
       <form className="landing-form" autoComplete="off" onSubmit={this.showBody}>
-        <label>Weight:</label>
+        <h3>Weight:</h3>
         {/* lbs weight */}
         <div>
           <input type="number"
             value={this.state.lb}
             onChange={this.setLbText}
-            name="weight" id='lb-weight' />
+            name="lb-weight" id='lb-weight' />
+            <label htmlFor='lb-weight'>lbs</label>
         </div>
         <div>
         {/* kg weight */}
           <input type="number"
             value={this.state.kg}
             onChange={this.setKgText}
-            name="weight" id='kg-weight' />
+            name="kg-weight" id='kg-weight' />
+            <label htmlFor='kg-weight'>kgs</label>
         </div>
         <input type="submit" value="Calculate" />
       </form>
