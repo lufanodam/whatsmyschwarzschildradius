@@ -28,7 +28,7 @@ class Header extends Component {
   }
 
   calculateRadius(MassInKg) {
-    return (2 * 6.67408*Math.pow(10,-11)) * MassInKg )/ Math.pow(299792458,2)
+    return (2 * 6.67408*Math.pow(10,-11) * MassInKg )/ Math.pow(299792458,2)
   }
   showBody(e) {
     e.preventDefault()
