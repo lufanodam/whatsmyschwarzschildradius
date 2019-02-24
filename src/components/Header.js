@@ -29,6 +29,7 @@ class Header extends Component {
   showBody(e) {
     e.preventDefault()
     this.setState({showBody: true})
+    this.props.onCalc(10)
   }
 
   setLbText(e) {

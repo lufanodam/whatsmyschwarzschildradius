@@ -9,15 +9,28 @@ import Header from './Header'
 import '../styles/global.css'
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+    this.onCalc = this.onCalc.bind(this)
 
-render() {
-  return (
+    this.state = {
+      landingState: true,
+      radius: 0
+    }
+  }
 
-    <>
-    <Body/>
-    <Header/>
-    <Sidebar/>
-    </>
+  onCalc(radius) {
+    this.setState({radius: radius, landingState: false})
+  }
+
+  render() {
+    return (
+
+      <>
+        <Body />
+        {this.state.landingState && <Header onCalc={this.onCalc} />}
+        <Sidebar />
+      </>
 
     );
   }
